@@ -21,9 +21,21 @@ const finishInput = () => {
 
 while(words.isComplete === false) {
     const NumberInput = prompt("give me a number")    // test that we create a variable for the number input
-    words.number = NumberInput                        // put it in the number key of the words object and make sure its a number          
+    words.number = Number(NumberInput)                        // put it in the number key of the words object and make sure its a number          
     finishInput()                                     // run the finishInput sequence   
 }
 
 console.log(words
-    )
+    )  // logs a number for the number input
+
+// within the while loop, we'll create pushes for all prompts
+
+while(words.isComplete === false) {
+    const NumberInput = prompt("give me a number")    
+    words.number = Number(NumberInput)
+    const adjectiveInput = prompt("give me an adjective")     // run the adjective input right after the number input
+    words.adjective = adjectiveInput
+    finishInput()                                               //finish sequence to test           
+}
+
+console.log(words)
