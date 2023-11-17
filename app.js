@@ -5,6 +5,25 @@ const words = {
     adjective: "tall",
     pluralNoun: "houses",
     adverb: "strongly",
-    anotherAdjective: "nice"
+    anotherAdjective: "nice",
+    isComplete: false
 }
 
+// we want a prompt to continue to appear asking for each piece of info until all pieces of info are complete
+// im thinking a While Loop for prompts and until the last is complete
+// isComplete added to the object - start it at false, we'll have a function update it to true once all prompts are delivered
+
+const finishInput = () => {
+    words.isComplete = true
+}
+
+// while loop to create prompts while isComplete is false
+
+while(words.isComplete === false) {
+    const NumberInput = prompt("give me a number")    // test that we create a variable for the number input
+    words.number = NumberInput                        // put it in the number key of the words object and make sure its a number          
+    finishInput()                                     // run the finishInput sequence   
+}
+
+console.log(words
+    )
