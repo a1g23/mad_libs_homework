@@ -64,14 +64,23 @@ console.log(answers)
 const addInputObj = () => {
     words.number = Number(answers[0])
     words.adjective = answers[1]
-    words.adverb = answers[2]
+    words.pluralNoun = answers[2]
+    words.adverb = answers[3]
+    words.anotherAdjective = answers[4]
 }
 addInputObj()
 
 console.log(words)
 
+// last function to create alert of the final mad libs
 
-// // while loops, one by one
-// while(words.number === false) {
-//     const numberInput = 
-// }
+const writeAlert = () => {
+    alert(`Once upon a time a group of ${words.number} General Assembly graduates
+    got together and made a startup called ${words.adjective} Technologies.
+    Their goal was to create smart ${words.pluralNoun}.
+    They approached the challenge ${words.adverb}
+    which ultimately lead them to ${words.anotherAdjective} fame.
+    `)
+}
+
+writeAlert()
